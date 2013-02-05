@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+
+    <!--<context:annotation-config/>-->
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
+
+    <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <!-- used to add the @SessionParam annotation to spring -->
+            <bean class="com.gogo.spring.web.SessionParamArgumentResolver"/>
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+
+    <mvc:view-controller path="/unsupported.html" view-name="unsupported"/>
+    <mvc:view-controller path="/unavailable.html" view-name="unavailable"/>
+    <mvc:view-controller path="/500.html" view-name="500"/>
+    <mvc:view-controller path="/flashless.html" view-name="flashless"/>
+
+    <!-- mobil support for pages that are not controller based-->
+    <mvc:view-controller path="/mobile/unavailable.html" view-name="unavailable"/>
+    <mvc:view-controller path="/mobile/unsupported.html" view-name="unsupported"/>
+    <mvc:view-controller path="/mobile/500.html" view-name="500"/>
+
+    <mvc:view-controller path="/nocookies.html" view-name="nocookies"/>
+
+    <context:component-scan base-package="com.gogo.gamp.web"/>
+
+    <!-- added to support abp needs of mobile-->
+    <context:component-scan base-package="com.aircell.abp.web"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp">
+
+        <property name="contentType" value="text/html; charset=UTF-8"/>
+        <property name="exposedContextBeanNames">
+            <list>
+                <value>properties</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>

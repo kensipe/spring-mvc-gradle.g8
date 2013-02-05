@@ -1,0 +1,1147 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**
+ * UNIVERSAL "LAYOUT" STYLE SHEET
+ * @Last Updated: January 4, 2013
+ */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
+}
+
+/** HEADER */
+#pageTop {
+    height: 50px;
+    position: relative;
+    min-width: 200px;
+}
+
+#pageLogo {
+    padding: 12px 420px 5px 19px;
+    vertical-align: middle;
+}
+
+#pageTopNav {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    min-width: 54px;
+}
+
+#pageTopNav li {
+    display: block;
+    float: left;
+    min-width: 54px;
+}
+
+#pageTopNav li a {
+    display: block;
+    float: left;
+    height: 50px;
+    padding: 2px 10px 0 20px;
+    min-width: 10px;
+}
+
+#pageTopNav li#nav-home a {
+  width: 10px;
+  margin: -7px 28px 0px 0;
+}
+
+#pageTopNav li#nav-catalog a {
+  width: 35px;
+  margin: -7px 28px 5px 0;
+}
+
+#pageTopNav li#maps a {
+  width: 5px;
+  margin: -7px 28px 5px 0;
+}
+
+#pageTopNav li#rss a {
+  width: 54px;
+  margin: -7px 28px 5px 0;
+}
+
+#pageTopNav li#you-pick a {
+  width: 16px;
+  margin: -7px 28px 5px 0;
+}
+
+#pageTopNav li#faq a {
+  width: 6px;
+  margin: -7px 28px 5px 0;
+}
+
+#pageTopNav li#custSupport a {
+    margin-left: 11px;
+}
+
+/** FOOTER */
+#pageBttmContent p {
+    padding: 10px;
+    text-align: center;
+}
+
+#pageBttmContent ul li {
+    display: inline-block;
+    float: left;
+}
+
+#pageLegal {
+    margin-left: 20px;
+}
+
+#pageBttm {
+    //position: absolute;
+    min-height: 72px;
+    bottom: 0;
+    width: 100%;
+}
+
+#pageBttmContent {
+    padding: 10px
+}
+
+#pageBttmContent ul li#termsUse {
+    border-right: solid 1px #fff;
+}
+
+#pageBttmContent ul li a {
+    margin: 0 12px;
+}
+
+/** CONTENT WRAPPER */
+#contentWrap {
+    padding: 0;
+}
+
+/** CONTENT */
+#content {
+    position: relative;
+}
+
+/** CONTENT HEADER */
+#contentHdr {
+    height: 34px;
+    padding: 10px;
+}
+
+#contentHdr a.PrePurchase {
+    display: block;
+    height: 73px;
+}
+
+#contentHdr #postPurchaseHdr {
+    display: block;
+    height: 73px;
+}
+
+#contentHdr.PurchasePath {
+    display: block;
+    height: 73px;
+}
+
+/** CONTENT BODY */
+#contentBody {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+@catalogHeaderHeight: 33px;
+
+/** MAIN CONTENT */
+#main {
+    height: 100%;
+    min-height: @catalogHeaderHeight + 550px;  /* header + browse menu */
+}
+
+/** CATALOG HEADER */
+
+.box-sizing {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.box-shadow-inset {
+   -moz-box-shadow:    inset 0 0 12px #ccc;
+   -webkit-box-shadow: inset 0 0 12px #ccc;
+   box-shadow:         inset 0 0 12px #ccc;
+}
+
+.box-shadow {
+  -moz-box-shadow:    0px 0px 5px 6px #ccc;
+  -webkit-box-shadow: 0px 0px 5px 6px #ccc;
+  box-shadow:         0px 0px 5px 6px #ccc;
+}
+
+.catalogHeader {
+    position: relative;
+    height: @catalogHeaderHeight;
+    z-index: 10;
+
+    .catalogHeaderControls {
+        .box-sizing;
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        white-space: normal;
+
+        li {
+            display: inline-block;
+            position: relative;
+        }
+    }
+
+    .browseButton {
+        .box-sizing;
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        width: 31px;
+        height: 23px;
+        cursor: pointer;
+        padding: 6px;
+        margin: 0 5px;
+        z-index: 20;
+    }
+    .browseMenu {
+        position: absolute;
+        top: @catalogHeaderHeight;
+        right: 0;
+        background-color: rgba(0.2, 0.2, 0.2, 0.8);
+        -moz-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+        .box-shadow-inset;
+        width: 200px;
+        padding: 6px 0 10px 6px;
+        display: none;  //enabled by JS
+        z-index: 20;
+    }
+}
+
+/* Sort */
+.wdListSortByDropdown {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 1 2px;
+    margin: 2px 1px 8px 8px;
+}
+
+/* Search Text Input */
+.wdSearchCnt {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: default;
+    height: 30px;
+    width: 193px;
+}
+
+.wdSearchInputCnt {
+    position: absolute;
+    left: 8px;
+    top: 2px;
+    margin-right: 10px;
+}
+
+.wdSearchBtn {
+    position: absolute;
+    left: -5px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.wdSearchBkg {
+    position: absolute;
+    width: 193px;
+    height: 28px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.wdSearchInput {
+    width: 162px;
+    height: 16px;
+    border: none;
+}
+
+/** RIGHT SIDEBAR */
+#sideBar {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 200px;
+    padding-bottom: 15px;;
+}
+
+#sidebarBanner {
+    margin: 20px auto;
+}
+
+#sideBar .sideContent {
+}
+
+#sideBar #sidebarHelp {
+    padding: 0px 13px;
+}
+
+#sideBar #sidebarHow h2 {
+    height: 49px;
+}
+
+#sideBar #sidebarDownld h2 {
+    height: 49px;
+}
+
+#sideBar #sidebarPay h2 {
+    height: 68px;
+}
+
+.crveTopRt {
+    -moz-border-radius: 0 10px 0 0;
+    border-radius: 0 10px 0 0;
+}
+
+
+/** BREADCRUMBS */
+#breadCrumbs {
+    padding: 18px;
+}
+
+
+/****************************************************************
+ * STORE FRONT
+ ****************************************************************/
+.carouselTop {
+  margin: 5px 0 0 0;
+  padding: 10px;
+}
+
+.carouselBtn {
+  float: right;
+  padding: 5px 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.carouselTitleCount {
+  margin: 10px;
+}
+
+.carouselContainer {
+}
+
+.slider {
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.slider img {
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.titlesCount {
+    padding: 4px 10px;
+}
+
+/****************************************************************
+ * TITLE DETAILS PAGE
+ ****************************************************************/
+
+#titleDetailsWrap {
+    width: 695px;
+    margin-left: 27px;
+}
+
+#titleDetailsWrap .BoxArt img {
+    border: solid 1px #bbbbbb;
+    display: block;
+}
+
+#titleDetailsWrap .TitleDetails h1 {
+    margin: 1px 0;
+}
+
+#titleDetailsWrap .BoxArt {
+    width: 250px;
+    float: left;
+    margin-bottom: 300px;
+}
+
+#titleDetailsWrap .TitleDetails {
+    position: relative;
+    width: 420px;
+    float: left;
+    margin-left: 23px;
+}
+
+#titleDetailsWrap .RatingRunTime {
+    margin-bottom: 25px;
+}
+
+#titleDetailsWrap .RatingRunTime img {
+    margin-right: 15px;
+}
+
+#titleDetailsWrap .RatingRunTime span {
+    margin-right: 8px;
+}
+
+#titleDetailsWrap .TitleActions {
+    margin: 5px 0;
+}
+
+#titleDetailsWrap .TitleInfo {
+    clear: both;
+    margin: 0 0 12px 0;
+}
+
+#titleDetailsWrap .TitleInfo .right {
+    float: right;
+    clear: right;
+    width: 330px;
+    padding: 0 5px;
+}
+
+#titleDetailsWrap .TitleInfo .left {
+    float: left;
+    clear: left;
+    width: 65px;
+}
+
+#titleDetailsWrap .Synopsis {
+    margin: 15px 0 20px 0;
+}
+
+.watchNowButton {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.viewTrailerButton {
+    display: inline-block;
+}
+
+/****************************************************************
+ * SEARCH RESULTS
+ ****************************************************************/
+
+/* Search Results List */
+.wdListCnt {
+}
+
+/* Search Results Title */
+.wdListTitle {
+	padding: 5px 18px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Search Results Filter */
+/* Filter */
+.resultsFilter {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.resultsFilterText {
+  margin: 0 0 6px 1px;
+  cursor: default;
+}
+
+.resultsFilter .active {
+    padding: 16px 15px 17px 15px;
+    display: inline-block;
+}
+
+.resultsFilter .selected {
+    padding: 16px 15px 17px 15px;
+    display: inline-block;
+}
+/* Search Results Sort */
+.wdListSortByDropdown {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 1px 0 0 1px;
+    vertical-align: middle;
+    margin: 2px 1px 8px 6px;
+}
+
+/* Search Results Items List */
+.wdListItemsCnt {
+    margin-top: 20px;
+    padding: 0 0 0 20px;
+}
+
+.wdListItem {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin: 6px;
+    width: 165px;
+}
+
+/* netjets large box images are 165w x 246h */
+.wdListItemImage {
+    margin: 5px 0;
+    height: 243px;
+    /* background-url: set by javascript */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wdListItemText {
+    height: 30px;
+}
+
+/*-----------------------------------
+ * Search Criteria (Sidebar content)
+ *---------------------------------*/
+
+/* List Menu Widget */
+.gvListMenu {
+    position: relative;
+    width: 193px;
+    cursor: default;
+}
+
+.gvListMenuTitle {
+    position: relative;
+    padding: 6px 16px 0 16px;
+    left: 1px;
+}
+
+.gvListMenuBody {
+    position: relative;
+    left: 1px;
+    padding-top: 4px;
+    padding-left: 16px;
+}
+
+.gvListMenuItem {
+    position: relative;
+    cursor: pointer;
+}
+
+.gvListMenuDivider {
+    position: relative;
+    padding-left: 16px;
+    left: 1px;
+    height: 6px;
+    margin: 12px 0;
+}
+
+/****************************************************************
+ * iPAD MESSAGING
+ ****************************************************************/
+
+#getPluginBanner {
+    clear: both;
+    margin: 20px auto 0 auto;
+}
+
+#GetPluginMssg {
+    position: absolute;
+    top: 68px;
+    right: 0;
+    width: 265px;
+    height: 85px;
+    z-index: 300;
+}
+
+#PluginSample {
+    float: right;
+    margin-left: 20px;
+}
+
+/****************************************************************
+ * MY LIBRARY
+ ****************************************************************/
+
+.MyLibTitles {
+    position: relative;
+    float: left;
+    width: 709px;
+    padding: 15px;
+    clear: both;
+    border-bottom: solid 1px #aaa;
+    border-right: solid 1px #aaa;
+    border-top: solid 1px #ccc;
+}
+
+.MyLibTitles .TitleDetails {
+    float: left;
+    margin-left: 8px;
+    width: 560px;
+}
+
+.MyLibTitles .TitleDetails h1 {
+    margin: 0 0 10px 0;
+}
+
+.MyLibTitles a.removeBtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    z-index: 100;
+    display: block;
+    padding: 3px 22px 3px 3px;
+}
+
+.MyLibTitles .BoxArt {
+    float: left;
+    width: 120px;
+}
+
+.MyLibTitles .BoxArt img {
+    width: 85px;
+    max-width: 85px;
+    height: auto;
+}
+
+.MyLibTitles .TitleDetails .TitleActions {
+    margin: 10px 0;
+}
+
+.MyLibTitles .TitleInfo .right {
+    float: left;
+    clear: right;
+    width: 340px;
+    padding: 10px 0 0 0;
+}
+
+.MyLibTitles .TitleInfo .left {
+    float: left;
+    clear: left;
+    width: 65px;
+    padding: 10px 0 0 0;
+}
+/** empty */
+.MyLibNoTitles {
+    margin-left: 18px;
+}
+
+.MyLibNoTitles h1 {
+    margin: 0 0 10px 0;
+}
+
+.MyLibNoTitles p {
+    margin: 0 0 10px 0;
+}
+
+.MyLibNoTitles li {
+    margin: 0 0 5px 30px;
+}
+
+/****************************************************************
+ * UTILITY PAGES (privacy, terms of use, etc...)
+ ****************************************************************/
+
+#contentHdr h1.UtilityPageHdr {
+    padding: 25px 18px 0 18px;
+}
+
+.UtilityPage {
+    width: 625px;
+    margin: 0 0 0 25px;
+    padding-bottom: 45px;
+}
+
+#FAQtitle {
+    height: 65px;
+}
+
+#FAQs h2 {
+    cursor: pointer;
+    padding-left: 12px;
+}
+
+#FAQs h3 {
+    border-bottom: dotted 1px #ffcb08;
+}
+
+.UtilityPage h1#contentTitle {
+    margin: 25px 0 10px 0;
+}
+
+.UtilityPage h2 {
+    margin: 25px 0 5px 0;
+}
+
+.UtilityPage p {
+    margin: 0 0 8px 0;
+}
+
+#FAQs ul {
+    margin-bottom: 20px;
+}
+
+#FAQs ul li {
+    margin: 4px 0 7px 25px;
+}
+
+.accordionContent {
+    border-left: solid 3px #ffcb08;
+    margin-left: 2px;
+    padding: 7px 18px;
+}
+
+/****************************************************************
+ * MODAL WINDOWS
+ ****************************************************************/
+
+.ModalWrapper {
+    position: absolute;
+    top: 0 !important;
+    z-index: 800;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ModalPos {
+    z-index: 999;
+    position: relative;
+    width: 750px;
+    margin: 60px auto;
+    border: solid 1px #bbb;
+    -moz-border-radius: 12px 12px 12px 12px;
+    border-radius: 12px 12px 12px 12px;
+}
+
+.PlayTrailer .ModalPos {
+    width: 700px !important;
+}
+
+.ContactGogo p {
+    margin-left: 18px !important;
+}
+
+.ModalClose {
+    position: absolute;
+    top: -32px;
+    right: 10px;
+    z-index: 1025;
+}
+
+.ModalClose a {
+    display: block;
+    width: 87px;
+    height: 23px;
+}
+
+.ModalActions {
+    margin: 40px 0px 0 0;
+}
+
+#SendEmailBtn, #GetFlashBtn {
+    margin: 100px 32px 0 32px;
+}
+
+#GetPluginBtn {
+    margin: 20px auto;
+}
+/* PC widevine instructions */
+.ModalContent ol li {
+    clear: both;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.ModalContent ol li div.leftCol {
+    float: left;
+    width: 320px;
+}
+
+.ModalContent ol li div.rightCol {
+    float: right;
+    width: 325px;
+    margin-top: -6px;
+    padding-bottom: 28px;
+}
+
+.ModalContent {
+    padding: 30px 30px 30px 30px;
+}
+
+.ModalContent h2 {
+    margin: 12px 0;
+}
+
+.ModalContent p {
+    margin: 8px 0;
+}
+
+/****************************************************************
+ * FUTURE ENHANCEMENTS: not for phase I
+ ****************************************************************/
+
+.titleHover .hoverGenres {
+    visibility: hidden;
+    display: none;
+}
+
+/****************************************************************
+ * FORM STYLES
+ ****************************************************************/
+
+/** fieldsets */
+fieldset {
+    clear: both;
+    display: block;
+    border: none;
+}
+
+#purchaseFormWrap fieldset {
+    margin-top: 20px;
+}
+
+fieldset#paymentInfo {
+    padding-top: 7px;
+}
+
+fieldset#purchaseCTA {
+    padding: 0 8px;
+}
+
+/** legends */
+legend {
+    height: 48px;
+    width: 700px;
+    display: block;
+}
+
+legend#lgndPayInfo {
+    height: 41px;
+}
+
+legend#lgndAccessCode {
+    height: 30px;
+}
+
+/** labels */
+label {
+    display: inline-block;
+    width: 116px;
+    margin-left: 20px;
+}
+
+label.cardLabel {
+    display: inline-block;
+    width: auto;
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+/** inputs */
+input#accessCodeText, input#emailAddr, input#cardNumber {
+    width: 325px;
+}
+
+/** select/option menus */
+select#expiryYear, select#expiryMonth, select#country {
+    width: 160px;
+}
+
+/** DIVs */
+.formWrap div.gutter {
+    padding: 10px 0;
+}
+
+div#accessCode {
+    position: relative;
+    padding: 16px 0;
+    border: solid 1px #969696;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.formWrap div.inputWrap {
+    position: relative;
+    clear: both;
+    padding: 8px 0;
+}
+/** other form elements */
+.formWrap {
+    margin-left: 16px;
+}
+
+#purchaseForm {
+    padding-bottom: 110px;
+}
+
+fieldset#purchaseCTA h2 {
+    margin: 6px 0 32px 0;
+}
+
+div#accessCode p {
+    margin-left: 140px;
+    margin-top: 5px;
+}
+
+div#accessCode input#applyCodeBtn, img#applyCode_Btn_Disabled {
+    position: absolute;
+    z-index: 100;
+    top: 40px;
+    right: 25px;
+}
+
+img#applyCode_Btn_Disabled {
+    display: none;
+}
+
+img#Purchase_Btn_Disabled {
+    display: none;
+}
+
+#formErrors li {
+    margin: 10px 25px 10px 170px;
+}
+
+/** BACK-END ERRORS */
+#formErrors {
+    position: relative;
+    border: solid 1px #de3433;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    height: 54px;
+    overflow: hidden;
+    padding-top: 5px;
+    padding-left: 75px;
+    display: none;
+    z-index: 500;
+}
+
+#formErrors p, #formErrors li {
+    margin-left: 140px;
+}
+
+/** FRONT-END ERRORS */
+div.CVVerror {
+    width: 470px !important;
+}
+
+div#errorMsg {
+    top: 15px !important;
+}
+/* iTunes + Rent-a-Tablet Modal */
+.modalSection {
+    position: relative;
+    padding-bottom: 25px;
+}
+
+#iTunesLink, #RentTabletIMG {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+#javascript-msg {
+    padding: 20px;
+}
+
+#javascript-msg p {
+    line-height: 18px;
+    margin: 5px 0px 8px 0;
+}
+
+#NoCookies {
+    padding: 20px;
+}
+
+#NoCookies p {
+    line-height: 18px;
+    margin: 5px 0px 8px 0;
+}
+
+.hoverRatingRunTime span {
+    margin-right: 8px;
+    visibility: hidden;
+}
+
+td.failureMessage {
+    height: 40px;
+}
+
+div.error, label.error, div#errorMsg {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    z-index: 500;
+    padding: 4px 0;
+    width: 205px;
+}
+
+.modalBttmSection {
+    padding-top: 40px;
+    border-top: solid 1px #ececec;
+}
+
+
+/*Widget Ad*/
+.wdAdCnt {
+    position: relative;
+    cursor: default;
+    width: 193px;
+    height: 159px;
+}
+
+.wdAdImage {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 180px;
+    height: 150px;
+    cursor: pointer;
+}
+
+/*Widget HaveQuestions*/
+.wdHaveQuestionsCnt {
+    position: relative;
+    cursor: default;
+    width: 193px;
+    height: 130px;
+}
+
+.wdHaveQuestionsImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 196px;
+    height: 116px;
+    cursor: pointer;
+}
+
+/*Widget Dropdown*/
+.wdDropdownCnt {
+    /*position: relative;*/
+    width: 139px;
+    height: 24px;
+    cursor: default;
+}
+
+.wdDropdownText {
+    color: #aaaaaa;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 100px;
+    height: 20px;
+}
+
+.wdDropdownPopup {
+    position: absolute;
+    left: -14px;
+    top: -7px;
+    width: 154px;
+    height: 152px;
+    cursor: default;
+}
+
+.wdDropdownPopupText {
+    width: 100px;
+    cursor: pointer;
+}
+
+.wdDropdownSelectMark {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+}
+
+.wdDropdownPopupTextCnt {
+    position: absolute;
+    left: 24px;
+    top: 11px;
+    cursor: default;
+}
+
+.wdDropdownPopupTextSep {
+    height: 6px;
+}
+
+#newsPage {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 30px auto;
+}
+
+#videoPlayer {
+  height: 379px;
+  width: 592px;
+}
+
+.videoPlayerWrapper {
+    width: 55%;
+    float:left;
+}
+
+.videoPlayerWrapper .newsVideoTitle {
+  padding: 10px 10px 0 20px;
+}
+
+.videoPlayerWrapper .newsVideoDate {
+  padding: 3px 10px 0 20px;
+}
+
+.newsVideoDescription {
+  padding: 0 10px 10px 20px;
+}
+
+.newsVideoPreviewDescription {
+  padding: 2px;
+}
+
+.newsGridWrapper {
+    width: 45%;
+    margin: 0px;
+    float:right;
+
+}
+
+.videoPreview {
+  display: inline-block;
+  width: 34%;
+  padding: 20px;
+  position: inherit;
+}
+
+.videoPreview i {
+    display: hidden;
+}
+
+.playable {
+    cursor: pointer;
+}
+
+.newsVideoTitle h1 {
+  padding: 5px;
+}
+

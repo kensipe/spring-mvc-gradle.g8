@@ -1,0 +1,400 @@
+
+//----------------------------------------------------------------------------
+//  Common rules
+//    This file is imported from each of the skin-specific style files,
+//    after defining skin-specific values for variables.
+//----------------------------------------------------------------------------
+
+
+#content {
+    -moz-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    background-color: @contentBackgroundColor;
+}
+
+/** CATALOG HEADER */
+.catalogHeader {
+    background: url('@{baseUrl}/images/custSpecSubHead_bkgd.jpg') repeat-x #222;
+    -moz-box-shadow: 0 5px 5px -5px #000;
+    -webkit-box-shadow: 0 5px 5px -5px #000;
+    box-shadow: 0 5px 5px -5px #000;
+}
+
+.browseButton {
+    background-color: #000066;
+}
+
+/** SEARCH BOX */
+#searchBox {
+    background: url('@{baseUrl}/images/scoot_Search_BG.png') no-repeat 0 0;
+}
+
+#searchBox input {
+    font-size: 14px;
+    color: @searchInputColor;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#searchBox input:focus {
+    color: #333;
+}
+
+/** RIGHT SIDEBAR */
+
+#sideBar {
+  background: url('@{baseUrl}/images/sidebar_bkgd.png') repeat-y center @searchPanelBackgroundColor;
+}
+
+#sideBar .sideContent {
+
+}
+
+#sideBar h2 {
+    text-indent: -99999px;
+}
+
+#sideBar #sidebarHelp {
+    -webkit-box-shadow: 0px 5px 3px -2px #bbbbbb;
+    -moz-box-shadow: 0px 5px 3px -2px #bbbbbb;
+    box-shadow: 0px 5px 3px -2px #bbbbbb;
+    background: #9d9e9e url('@{baseUrl}/images/sidebarHelp_BG.png') repeat-x 0 0;
+}
+
+#sideBar #sidebarHelp h2 {
+    text-indent: 0;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#sideBar #sidebarHow h2 {
+    background: url('@{baseUrl}/images/Sidebar_titles.png') no-repeat 0 0;
+}
+
+#sideBar #sidebarDownld h2 {
+    background: url('@{baseUrl}/images/Sidebar_titles.png') no-repeat 0 -75px;
+}
+
+#sideBar #sidebarPay h2 {
+    background: url('@{baseUrl}/images/Sidebar_titles.png') no-repeat 0 -159px;
+}
+
+.sideContent p {
+    font-size: 11px;
+    color: #ffffff;
+    line-height: 15px;
+}
+
+.sideContent a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#sidebarBanner {
+    text-align: center;
+}
+
+/** FOOTER */
+#pageBttm {
+    background: #3f3e40 url('@{baseUrl}/images/footer_bkgd.jpg') repeat-x 0 0;
+}
+
+#pageBttmContent {
+    color: #ffffff;
+    font-size: 11px;
+}
+
+#pageBttmContent ul li a {
+    color: #fff;
+    font-weight: bold;
+}
+
+/****************************************************************
+ * STORE FRONT
+ ****************************************************************/
+
+.carouselTop {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.carouselBody {
+    background: @carouselBodyBackgroundColor;
+}
+
+.carouselBottom {
+    background: @carouselBottomBackgroundColor;
+    text-align: right;
+    font-size: 11px;
+    color: #7d7d7d;
+}
+
+.carouselTitle {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Helvetica;
+}
+
+.carouselTitleCount {
+  font-size: 10px;
+  color: #cccccc;
+  font-family: Helvetica;
+  font-style: bold;
+}
+
+/****************************************************************
+ * TITLE DETAILS PAGE
+ ****************************************************************/
+
+#titleDetailsWrap {
+    font-size: 12px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #595959;
+}
+
+#titleDetailsWrap .BoxArt img {
+    -moz-box-shadow: 5px 5px 5px #000;
+    -webkit-box-shadow: 5px 5px 5px #000;
+    box-shadow: 5px 5px 5px #000;
+    border: 1px solid #ccc;
+}
+
+#titleDetailsWrap .TitleDetails h1 {
+    color: #333;
+    font-size: 30px;
+}
+
+#titleDetailsWrap .TitleDetails a {
+    color: #333;
+    text-decoration: underline;
+}
+
+#titleDetailsWrap .Synopsis {
+    font-size: 14px;
+}
+
+/****************************************************************
+ * SEARCH
+ ****************************************************************/
+
+.wdListTitle {
+    font: 20px Helvetica;
+    font-weight: bold;
+    color: #fff;
+}
+
+.resultsFilterText {
+    font: bold 11px arial;
+    color: @resultsFilterTextColor;
+    line-height: 0;
+    text-align: center;
+}
+
+.resultsFilter .active {
+    color: #fff;
+    cursor: pointer;
+    background: url('@{baseUrl}/images/widgets/search/active_filterbtn.jpg') @resultsFilterActiveColor;
+}
+
+.resultsFilter .selected {
+    color: #fff;
+    cursor: pointer;
+    background: url('@{baseUrl}/images/widgets/search/selected_filterbtn.jpg') #eee;
+}
+
+.wdListItemImage {
+    border: 1px solid #ccc;
+    -moz-box-shadow: 5px 5px 5px #000;
+    -webkit-box-shadow: 5px 5px 5px #000;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.wdListItemText {
+    line-height: 14px;
+    font: bold 12px arial;
+    color: @resultsItemTextColor;
+    text-align: center;
+    text-shadow: 2px 2px 2px @resultsItemTextShadowColor;
+}
+
+.wdListSortByDropdown {
+  color:#333 !important;
+  font-family: helvetica;
+  font-size: 14px;
+}
+
+/*-----------------------------------
+ * Search Criteria (Sidebar content)
+ *---------------------------------*/
+
+.wdSearchBtn {
+    font-size: 1px;
+}
+
+.wdSearchBkg {
+    background: url('@{baseUrl}/images/widgets/search/wdSearchBox.png') no-repeat @searchBackgroundColor;
+}
+
+.wdSearchInput {
+    background: none;
+    font: 11px arial;
+    color: @searchInputColor;
+    text-align: right;
+}
+
+/****************************************************************
+ * iPAD MESSAGING
+ ****************************************************************/
+
+#getPluginBanner {
+    text-align: center;
+}
+
+.modalLink {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/****************************************************************
+ * UTILITY PAGES (privacy, terms of use, etc...)
+ ****************************************************************/
+
+.UtilityPage {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    color: #585858;
+}
+
+.UtilityPage h1#contentTitle {
+    font-size: 18px;
+}
+
+.UtilityPage h2 {
+    font-size: 16px;
+}
+
+.UtilityPage p {
+    font-size: 12px;
+    line-height: 150%;
+}
+
+#FAQtitle {
+    background: url('@{baseUrl}/images/FAQtitle_txt.png') no-repeat 14px 14px;
+    text-indent: -99999px;
+}
+
+#FAQs h2 {
+    background: url('@{baseUrl}/images/FAQs_h2_BG.png') no-repeat 0 5px;
+}
+
+#FAQs h2.on {
+    background: url('@{baseUrl}/images/FAQs_h2_BG.png') no-repeat 0 -53px;
+}
+
+#FAQs ul li {
+    list-style: disc outside;
+}
+
+/****************************************************************
+ * MODAL WINDOWS
+ ****************************************************************/
+
+.ModalWrapper {
+    background: url('@{baseUrl}/images/Modal_Trans_BG.png') repeat;
+}
+
+.ModalPos {
+    color: #fff;
+    background-color: #000;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000', GradientType=0);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #000));
+    background: -moz-linear-gradient(top, #333, #000);
+    background-image: -o-linear-gradient(#333, #000);
+}
+
+.ModalContent h1 {
+    font-size: 25px;
+}
+
+.ModalContent h1, .ModalContent h2 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.ModalContent h1.strssd {
+    color: #ffc20f !important;
+}
+
+.ModalContent h2 {
+    font-size: 18px;
+    color: #ffc20f;
+}
+
+.ModalContent h2 a {
+    color: #ffc20f;
+    text-decoration: underline
+}
+
+.ModalContent p {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    margin: 8px 0;
+    line-height: 150%;
+}
+
+.ModalClose a {
+    background: url('@{baseUrl}/images/Modal_Cancel_Btn.png') no-repeat 0 0;
+    text-indent: -99999px;
+}
+
+.ModalActions {
+    text-align: right;
+}
+
+.ModalContent ol li {
+    font-size: 12px;
+    list-style-type: decimal;
+}
+
+#SendEmailBtn, #GetFlashBtn {
+    text-align: right;
+}
+
+#GetPluginBtn {
+    text-align: center;
+}
+
+/* iTunes + Rent-a-Tablet Modal */
+.ModalContent .modalBttmSection h1 {
+    font-size: 14px;
+}
+
+.addToLibr {
+    text-align: right;
+}
+
+/* List Menu Widget */
+
+.gvListMenu {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.gvListMenuTitle {
+	font-size: 14px;
+    color: @listMenuTitleColor;
+    text-transform: uppercase;
+}
+
+.gvListMenuItem {
+	line-height: 20px;
+	font-size: 14px;
+    color: @listMenuItemColor;
+}
+
+.gvListMenuItem:hover {
+    color: @listMenuItemHoverColor;
+}
+
+.gvListMenuDivider {
+    background: url('@{baseUrl}/images/widgets/genres/sidebarLine.png') no-repeat;
+}

@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+        "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+    <shortname>gogo</shortname>
+    <tlibversion>1.0</tlibversion>
+    <jspversion>1.1</jspversion>
+    <uri>http://www.gogoair.com/</uri>
+    <info>GoGo Tags Library</info>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.UrlTag</tagclass>
+        <name>url</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>Creates url path based on conventions for controller name and method or takes the string value and appends
+            the spring mapping
+        </info>
+
+        <attribute>
+            <name>controller</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>method</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>secured</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.VersionTag</tagclass>
+        <name>version</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>adds version details to the page
+        </info>
+
+        <attribute>
+            <name>comment</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.BuyUrlTag</tagclass>
+        <name>buyUrl</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>
+            Creates the url link to the ground resources for credit card purchase.  This concatenates the ground url, SID and flight info.
+        </info>
+
+        <attribute>
+            <name>var</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.ConventionJavaScriptInclusionTag</tagclass>
+        <name>autoJs</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>
+            Automatically includes a js with the same file name as the request such as /catalog/index.html will match catalog_index.js
+            in the skinned location or the common location.
+        </info>
+
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.AnalyticsTag</tagclass>
+        <name>analytics</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>
+            logs the analytical details of a page visit
+        </info>
+
+        <attribute>
+            <name>page</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.LinkTag</tagclass>
+        <name>link</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>Creates a href link path based on conventions for controller name and method or takes the string value and
+            appends
+            the spring mapping
+        </info>
+
+        <attribute>
+            <name>controller</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>method</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>title</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>clazz</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>secured</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.FlashLinkTag</tagclass>
+        <name>flash</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>Creates a href link for flash players based on the user agent</info>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.AndroidLinkTag</tagclass>
+        <name>androidLink</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>Creates a href link for android plugin download</info>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.CareEmailTag</tagclass>
+        <name>care</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>Creates a gogo care email which includes the details of the user information
+        </info>
+
+        <attribute>
+            <name>subject</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>email</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>includeUserDetail</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>leaveBelowMessage</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.ScriptTag</tagclass>
+        <name>script</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>Creates a gogo javascript script tag
+        </info>
+
+        <attribute>
+            <name>src</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.SIDScriptTag</tagclass>
+        <name>sid</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>Creates a gogo javascript script tag with the SID
+        </info>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.ResourceLinkTag</tagclass>
+        <name>resourceLink</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>Creates a gogo style sheet link tag
+        </info>
+
+        <attribute>
+            <name>href</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>type</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>rel</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.UserAuthorizedTag</tagclass>
+        <name>authorized</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>If paid user, displays the contained body. Checks if the user is "authorized" so a user is authorized if
+            we are looking for an unpaid user.
+        </info>
+
+        <attribute>
+            <name>paid</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.DeviceDisplayTag</tagclass>
+        <name>displayForDevice</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>Uses a session to determine the number of times a page has been displayed for a user
+        </info>
+
+        <attribute>
+            <name>mobile</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>platform</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>browser</name>
+            <required>false</required>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.DisplayFrequencyTag</tagclass>
+        <name>displayFrequency</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>Will display body content if the user-agent matches the properties of the tag
+        </info>
+
+        <attribute>
+            <name>times</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>name</name>
+            <required>true</required>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.DisplayIfParamTag</tagclass>
+        <name>ifParam</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>Will display body content if the request param is present and has a value of value
+        </info>
+
+        <attribute>
+            <name>param</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>true</required>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.DeviceHideTag</tagclass>
+        <name>hideForDevice</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>Will not display body content if the user-agent matches the properties of the tag
+        </info>
+
+        <attribute>
+            <name>mobile</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>platform</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>browser</name>
+            <required>false</required>
+        </attribute>
+
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.FeatureToggleTag</tagclass>
+        <name>featureDisplay</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>turns on and off features in the application based on system or scoped properties
+        </info>
+
+        <attribute>
+            <name>display</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>property</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>value</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.GampFeatureToggleTag</tagclass>
+        <name>feature</name>
+        <bodycontent>JSP</bodycontent>
+
+        <info>turns on and off features in the application based gamp config configurations, the default is to display if feature is true
+        </info>
+
+        <attribute>
+            <name>display</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>feature</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tagclass>com.gogo.gamp.web.tags.ImageTag</tagclass>
+        <name>img</name>
+        <bodycontent>empty</bodycontent>
+
+        <info>Creates the image tag with poor context
+        </info>
+
+        <attribute>
+            <name>src</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>alt</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>height</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>width</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>clazz</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+
+</taglib>
